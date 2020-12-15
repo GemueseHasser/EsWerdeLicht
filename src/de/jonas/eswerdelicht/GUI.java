@@ -62,7 +62,7 @@ public class GUI {
         JLabel label = new JLabel("Du hattest in diesem Spiel " + Variablen.clicks + " Klicks!", JLabel.CENTER);
         label.setBounds(0, 20, frame.getWidth(), 50);
 
-        JButton button = new JButton("Neues Spiel");
+        JButton button = new JButton("neues Spiel");
         button.setBounds(100, 80, 150, 25);
         button.addActionListener(actionEvent -> {
             frame.dispose();
