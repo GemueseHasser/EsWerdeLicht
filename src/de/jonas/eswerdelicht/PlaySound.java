@@ -10,7 +10,7 @@ import javazoom.jl.player.Player;
 public class PlaySound {
 
     Timer timer;
-    InputStream is = getClass().getResourceAsStream("/de/jonas/res/music.mp3");
+    InputStream is = getClass().getResourceAsStream("/de/jonas/res/Goatubbies.mp3");
     Player player = new Player(is);
 
     public PlaySound() throws JavaLayerException {
@@ -24,7 +24,7 @@ public class PlaySound {
                     e.printStackTrace();
                 }
             }
-        }, 0, 315000);
+        }, 0, 207600);
     }
 
 }

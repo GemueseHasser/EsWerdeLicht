@@ -8,4 +8,6 @@ public class Variablen {
 
     static int clicks = 0;
 
+    static int backgroundX1 = 0, backgroundX2 = GUI.FRAME.getWidth();
+
 }

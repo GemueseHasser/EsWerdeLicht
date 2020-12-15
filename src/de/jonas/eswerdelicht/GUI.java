@@ -10,6 +10,8 @@ public class GUI {
 
     static JButton[] button = new JButton[25];
 
+    static JFrame FRAME;
+
     public GUI() {
         JFrame frame = new JFrame("Es werde Licht - by Jonas");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,6 +49,7 @@ public class GUI {
         frame.add(draw);
 
         frame.setVisible(true);
+        FRAME = frame;
     }
 
     private void newGame() {

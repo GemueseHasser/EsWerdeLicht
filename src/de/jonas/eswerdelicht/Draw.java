@@ -17,7 +17,8 @@ public class Draw extends JLabel {
 
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        g.drawImage(ImageLoader.imgDisco, 0, 0, this.getWidth(), this.getHeight(), null);
+        g.drawImage(ImageLoader.imgDisco, Variablen.backgroundX1, 0, this.getWidth(), this.getHeight(), null);
+        g.drawImage(ImageLoader.imgDiscoFlipped, Variablen.backgroundX2, 0, this.getWidth(), this.getHeight(), null);
 
         g.setColor(Color.BLACK);
         g.fillRect(200, 20, 300, 40);

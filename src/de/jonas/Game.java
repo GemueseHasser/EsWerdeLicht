@@ -1,5 +1,6 @@
 package de.jonas;
 
+import de.jonas.eswerdelicht.CalculateBackground;
 import de.jonas.eswerdelicht.GUI;
 import de.jonas.eswerdelicht.ImageLoader;
 import de.jonas.eswerdelicht.PlaySound;
@@ -13,6 +14,7 @@ public class Game {
         new GUI();
         new PlaySound();
         new WinTimer();
+        new CalculateBackground();
     }
 
 }
