@@ -9,10 +9,10 @@ import javazoom.jl.decoder.JavaLayerException;
 public class Game {
 
     public static void main(String[] args) throws JavaLayerException {
-        new GUI();
-        new WinTimer();
         new ImageLoader();
+        new GUI();
         new PlaySound();
+        new WinTimer();
     }
 
 }
