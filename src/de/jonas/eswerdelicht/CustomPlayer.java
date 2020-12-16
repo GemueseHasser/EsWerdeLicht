@@ -5,7 +5,6 @@ import javax.swing.JOptionPane;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 
-import javazoom.jl.player.Player;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
 public class CustomPlayer {
@@ -30,23 +29,19 @@ public class CustomPlayer {
         canResume = false;
     }
 
-    public boolean canResume(){
-        return canResume;
-    }
-
     public void setPath(String path){
         this.path = path;
     }
 
     public void pause(){
-        try{
+        try {
             stopped = FIS.available();
             player.close();
             FIS = null;
             BIS = null;
             player = null;
             if(valid) canResume = true;
-        }catch(Exception e){
+        } catch (Exception ignored){
 
         }
     }
@@ -81,15 +76,13 @@ public class CustomPlayer {
             BIS = new BufferedInputStream(FIS);
             player = new AdvancedPlayer(BIS);
             new Thread(
-                new Runnable(){
-                    public void run(){
-                        try{
-                            player.play();
-                        }catch(Exception e){
-                            JOptionPane.showMessageDialog(null, "Error playing mp3 file");
-                            valid = false;
-                            System.exit(0);
-                        }
+                () -> {
+                    try{
+                        player.play();
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(null, "Error playing mp3 file");
+                        valid = false;
+                        System.exit(0);
                     }
                 }
             ).start();

@@ -13,10 +13,10 @@ import java.awt.geom.RoundRectangle2D;
 public class RoundButton extends JButton {
 
     private Shape shape;
-    private int arc;
-    private boolean isQuadratic;
+    private final int arc;
+    private final boolean isQuadratic;
 
-    public RoundButton(String text, int arc, boolean isQuadratic) {
+    public RoundButton(String text, final int arc, final boolean isQuadratic) {
         super(text);
         this.arc = arc;
         this.isQuadratic= isQuadratic;

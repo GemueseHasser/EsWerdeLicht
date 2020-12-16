@@ -3,14 +3,12 @@ package de.jonas.eswerdelicht;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import javazoom.jl.decoder.JavaLayerException;
-
 public class PlaySound {
 
     static Timer timer;
     static CustomPlayer player;
 
-    public PlaySound() throws JavaLayerException {
+    public PlaySound() {
         player = new CustomPlayer();
         player.setPath(getClass().getResource("/de/jonas/res/Goatubbies.mp3").getPath());
         timer = new Timer();
