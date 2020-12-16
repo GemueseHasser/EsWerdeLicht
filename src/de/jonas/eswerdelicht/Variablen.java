@@ -10,4 +10,6 @@ public class Variablen {
 
     static int backgroundX1 = 0, backgroundX2 = GUI.FRAME.getWidth();
 
+    static boolean playMusic = true;
+
 }

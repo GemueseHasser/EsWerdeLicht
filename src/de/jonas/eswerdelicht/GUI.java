@@ -1,10 +1,13 @@
 package de.jonas.eswerdelicht;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import java.awt.Color;
+import java.awt.Font;
 
 public class GUI {
 
@@ -45,6 +48,25 @@ public class GUI {
             newGame();
         });
 
+        ImageIcon icon = new ImageIcon(ImageLoader.speakerOn);
+
+        JButton mute = new RoundButton("", 75, false);
+        mute.setIcon(icon);
+        mute.setBounds(15, 15, 50, 50);
+        mute.setFont(new Font("Arial", Font.BOLD, 19));
+        mute.addActionListener(actionEvent -> {
+            if (Variablen.playMusic) {
+                Variablen.playMusic = false;
+                PlaySound.player.pause();
+                icon.setImage(ImageLoader.speakerOff);
+            } else {
+                Variablen.playMusic = true;
+                icon.setImage(ImageLoader.speakerOn);
+                PlaySound.player.restart();
+            }
+        });
+
+        frame.add(mute);
         frame.add(reset);
         frame.add(draw);
 
