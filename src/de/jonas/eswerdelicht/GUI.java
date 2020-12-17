@@ -43,7 +43,6 @@ public class GUI {
         reset.setOpaque(true);
         reset.setBackground(Color.LIGHT_GRAY);
         reset.addActionListener(actionEvent -> {
-            Variablen.game = false;
             newGame();
         });
 
@@ -87,6 +86,7 @@ public class GUI {
         button.setBounds(100, 80, 150, 25);
         button.addActionListener(actionEvent -> {
             frame.dispose();
+            Variablen.game = false;
             ButtonPlacement.reset();
         });
 
